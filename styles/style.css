@@ -5,13 +5,13 @@ body, h1, h2, p, ul, li
     padding: 0;
 }
 
-/* Centralize o texto no rodapé */
+/* Centraliza o texto no rodapé */
 footer 
 {
     text-align: center;
 }
 
-/* Defina a fonte padrão e as cores */
+/* fonte padrão e as cores */
 body 
 {
     font-family: Arial, sans-serif;
@@ -19,23 +19,16 @@ body
     color: #333;
 }
 
-div
-{
-    background: url('images/iate_background.jpg');      /* Corrigir mais tarde */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* Estilize o cabeçalho */
+/* cabeçalho */
 header 
 {
-    background-color: hsl(268, 100%, 14%);
+    background-color: #f5f5f5;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    border-bottom: 2px solid #333;
 }
 
 header img 
@@ -54,16 +47,35 @@ header li
 {
     margin-right: 20px;
     font-weight: bold;
-    color:#f5f5f5
+    color:#333;
 }
 
-/* Estilize o conteúdo principal */
+/* capa */
+#frontCover
+{
+    height: 740px;
+    text-align: center;  
+
+    background-image: url(iate_background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.upper, .lower
+{
+    height: 100px;
+    background-color: hsl(236, 19%, 16%);
+}
+
+/* conteúdo principal */
 main 
 {
     padding: 0px;
 }
 
-main img 
+main img
 {
     max-width: 100%;
     height: auto;
@@ -71,7 +83,45 @@ main img
 
 section 
 {
-    margin-top: 20px;
+    margin-top: 0px;
+}
+
+.section-left, .section-right       /* Seções */
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.img1, .img2
+{
+    max-width: 60%;
+    height: auto;
+    flex: 1;
+}
+
+.content
+{
+    flex: 1;
+    padding: 20px;
+}
+
+.section-left
+{
+    flex-direction: row-reverse;
+}
+
+.section-right
+{
+    flex-direction: row;
+}
+
+.about
+{
+    text-align: center;
+    padding: 1% 2% 0 2%;
+   
+    background-color: hsl(192, 100%, 87%);
 }
 
 h1 
@@ -88,16 +138,16 @@ p
     margin-bottom: 20px;
 }
 
-/* Estilize o rodapé */
+/* rodapé */
 footer 
 {
     text-align: center;
-    background-color: #333;
-    color: #fff;
+    background-color: hsl(236, 19%, 16%);
+    color: #ffffff;
     padding: 10px;
 }
 
-/* Estilize os links */
+/* links */
 a 
 {
     color: #0076d6;
