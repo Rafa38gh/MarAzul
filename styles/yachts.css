@@ -50,6 +50,42 @@ header li
     color:#333;
 }
 
+/* capa */
+#frontCover
+{
+    height: 740px;
+    
+    background-image: url(iate_background2.jfif);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+
+    font-family: 'Kanit', sans-serif;
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#frontCover h1
+{
+    padding: 100px 0px 0px 150px;
+    font-size: 300%;
+    font-weight: bolder;
+}
+
+#frontCover p
+{
+    padding-left: 150px;
+    font-size: 200%;
+}
+
+.upper, .lower
+{
+    height: 100px;
+    background-color: hsl(236, 19%, 16%);
+}
+
 /* rodapé */
 footer 
 {
