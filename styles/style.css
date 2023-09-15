@@ -50,6 +50,14 @@ header li
     color:#333;
 }
 
+header p
+{
+    margin-right: 600px;
+    margin-bottom: -5px;
+    font-weight: bold;
+    color: hsl(192, 100%, 66%);
+}
+
 /* capa */
 #frontCover
 {
