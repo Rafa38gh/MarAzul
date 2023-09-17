@@ -1,16 +1,16 @@
 <?php
     // valores mysql
-    $servername = "localhost:3306";
+    $servername = "localhost";
     $username = "root";
     $password = "12345";
-    $dbname = "mar_azul";
+    $dbname = "marazul";
 
     // conecta com o banco de dados
-    $conn = new mysqli($servername, $username, $password, $dbname)
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // verifica a conexao
     if($conn->connect_error){
-        die("Conexao falhou: " . $conn->connect_error);
+        die("Erro de conexao: ".$conn->connect_error);
     }
 
     // recebe dados do formulario
@@ -22,10 +22,10 @@
     $sql = "INSERT INTO dados_iate (nome_yatch, descricao, preco) VALUES ('$nome_yatch', '$descricao', '$preco')";
 
     // checa se cadastrou
-    if(conn ->query($sql) === TRUE){
+    if($conn->query($sql) === TRUE){
         echo "Yatch cadastrado com sucesso!";
     }else{
-        echo "Erro ao cadastrar: " . $conn->error;
+        echo "Erro ao cadastrar: ".$conn->error;
     }
 
     // fecha a conexao com a database
