@@ -21,13 +21,11 @@
     // insere dados na database
     $sql = "INSERT INTO dados_iate (nome_yatch, descricao, preco) VALUES ('$nome_yatch', '$descricao', '$preco')";
 
-    // checa se cadastrou
     if($conn->query($sql) === TRUE){
-        echo "Yatch cadastrado com sucesso!";
+        header("Location: index.html");
     }else{
-        echo "Erro ao cadastrar: ".$conn->error;
+        header("Location: listaryatch.html");
     }
-
     // fecha a conexao com a database
     $conn->close();
 ?>
