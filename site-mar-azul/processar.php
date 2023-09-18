@@ -1,9 +1,9 @@
 <?php
     // valores mysql
-    $servername = "localhost";
+    $servername = "db";
     $username = "root";
     $password = "12345";
-    $dbname = "marazul";
+    $dbname = "dbmarazul";
 
     // conecta com o banco de dados
     $conn = mysqli_connect($servername, $username, $password, $dbname);
