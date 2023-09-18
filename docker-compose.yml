@@ -25,3 +25,5 @@ services:
     environment:
       MYSQL_DATABASE: dbmarazul
       MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+      - "./dump:/docker-entrypoint-initdb.d"
