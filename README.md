@@ -1,3 +1,7 @@
 # MarAzul
 
-precisa do XAMPP para rodar, nao consegui colocar no docker
+clona o repositorio
+
+no terminal:
+    entra no diretorio que foi salvo
+    docker-compose up -d
