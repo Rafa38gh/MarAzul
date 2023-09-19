@@ -11,5 +11,5 @@
     - Abra o aplicativo Docker Desktop
     - Abra o repositório clonado no Vs Code
     - Abra o terminal (atalho: Ctrl+')
-    - Insira o comando 'docer-compose up -d' para criar o container
+    - Insira o comando 'docker-compose up -d' para criar o container
     - Acesse os containeres pelo Docker Desktop
