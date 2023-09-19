@@ -1,0 +1,182 @@
+/* Reset de estilos padrão do navegador */
+body, h1, h2, p, ul, li 
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Centraliza o texto no rodapé */
+footer 
+{
+    text-align: center;
+}
+
+/* fonte padrão e as cores */
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* cabeçalho */
+header 
+{
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+header img 
+{
+    align-items: center;
+    max-width: 100px;
+    height: 45px;
+}
+
+header ul 
+{
+    align-items: center;
+    list-style: none;
+    display: flex;
+}
+
+header li 
+{
+    margin-right: 20px;
+    color:#333;
+}
+
+header p
+{
+    flex: 1;
+    color: hsl(192, 100%, 66%);
+    padding-top: 13px;
+}
+
+/* capa */
+#frontCover
+{
+    height: 740px;
+    text-align: center;  
+
+    background-image: url(iate_background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+
+    &::before       /* Escurece imagem de fundo */
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+}
+
+.upper, .lower
+{
+    height: 100px;
+    background-color: hsl(236, 19%, 16%);
+}
+
+/* conteúdo principal */
+main 
+{
+    padding: 0px;
+}
+
+main img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+section 
+{
+    margin-top: 0px;
+}
+
+.section-left, .section-right       /* Seções */
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.img1, .img2
+{
+    max-width: 60%;
+    height: auto;
+    flex: 1;
+}
+
+.content
+{
+    flex: 1;
+    padding: 20px;
+}
+
+.section-left
+{
+    flex-direction: row-reverse;
+}
+
+.section-right
+{
+    flex-direction: row;
+}
+
+.about
+{
+    text-align: center;
+    padding: 1% 2% 0 2%;
+   
+    background-color: hsl(192, 100%, 87%);
+}
+
+h1 
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0076d6;
+}
+
+.about p 
+{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* rodapé */
+footer 
+{
+    text-align: center;
+    background-color: hsl(236, 19%, 16%);
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* links */
+a 
+{
+    color: #0076d6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover 
+{
+    color: hsl(261, 100%, 37%);
+}
