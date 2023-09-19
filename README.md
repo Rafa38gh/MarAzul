@@ -1,7 +1,5 @@
 # MarAzul
 
-clona o repositorio
-
-no terminal:
-    entra no diretorio que foi salvo
-    docker-compose up -d
+1. Clone o repositório
+    - Use o comando 'cd path' no prompt de comando para navegar até o diretório onde pretende clonar o repositório
+    - Insira o comando 'git clone      
