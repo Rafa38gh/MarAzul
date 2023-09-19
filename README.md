@@ -10,5 +10,5 @@
  3. Crie o container
     - Abra o aplicativo Docker Desktop
     - Abra o repositório clonado no Prompt de Comando
-    - Insira o comando 'docer-compose up -d' para criar o container
+    - Insira o comando 'docker-compose up -d' para criar o container
     - Acesse os containeres pelo Docker Desktop
