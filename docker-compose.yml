@@ -1,27 +1,29 @@
-version: '3.1'
+version: '3.1'  # versao do docker compose
 
-services:
-  php:
-    build:
+services: # containers do compose
+  php: # container php
+    build: # constroi a imagem do dockerfile
       context: .
       dockerfile: Dockerfile
-    ports:
+    ports: # recebe a porta 80 do container (porta default) e redireciona para a 8081 (porta da maquina)
       - 8081:80
-    volumes:
+    volumes: # pega o conteudo do site que esta no pc e envia para a pasta padrao do php apache
       - ./site-mar-azul:/var/www/html/
 
-  phpmyadmin:
-    image: phpmyadmin
-    ports:
+  phpmyadmin: # container phpmyadmin
+    image: phpmyadmin #pega a imagem do phpmyadmin
+    restart: always #sla
+    ports: # recebe a porta 80 do container phpmyadmin e retorna para 8082
       - 8082:80
-    environment:
+    environment: #variaveis de ambiente necessarias para funcionamento do container phpmyadmin
       - PMA_ARBITRARY=1
   
-  db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
+  db: #container banco de dados
+    image: mysql #pega a imagem do mysql
+    command: --default-authentication-plugin=mysql_native_password #sla
+    restart: always #sla
+    environment:  #variaveis de ambiente necessarias para funcionamento do container mysql
       MYSQL_DATABASE: dbmarazul
       MYSQL_ROOT_PASSWORD: 12345
-    volumes:
-      - "./dump:/docker-entrypoint-initdb.d"
+    volumes: 
+      - "./dump:/docker-entrypoint-initdb.d" # execução de scripts sql ao iniciar o container
