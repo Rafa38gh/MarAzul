@@ -3,7 +3,7 @@ version: '3.1'  # versao do docker compose
 services: # containers do compose
   php: # container php
     build: # constroi a imagem do dockerfile
-      context: .
+      context: . # diretório onde o dockerfile está
       dockerfile: Dockerfile
     ports: # recebe a porta 80 do container (porta default) e redireciona para a 8081 (porta da maquina)
       - 8081:80
@@ -12,7 +12,7 @@ services: # containers do compose
 
   phpmyadmin: # container phpmyadmin
     image: phpmyadmin #pega a imagem do phpmyadmin
-    restart: always #sla
+    restart: always # define a reiniciação em caso de falha
     ports: # recebe a porta 80 do container phpmyadmin e retorna para 8082
       - 8082:80
     environment: #variaveis de ambiente necessarias para funcionamento do container phpmyadmin
@@ -20,8 +20,8 @@ services: # containers do compose
   
   db: #container banco de dados
     image: mysql #pega a imagem do mysql
-    command: --default-authentication-plugin=mysql_native_password #sla
-    restart: always #sla
+    command: --default-authentication-plugin=mysql_native_password  # aqui pode especificar comandos que serão executados quando o conteiner iniciar
+    restart: always  # define a reiniciação em caso de falha
     environment:  #variaveis de ambiente necessarias para funcionamento do container mysql
       MYSQL_DATABASE: dbmarazul
       MYSQL_ROOT_PASSWORD: 12345
